@@ -1,7 +1,7 @@
 getwd()
 setwd("/Users/apple/Desktop/ds final project 1")
 
-### Using a pre-processed file
+### Pre-processing and analysis are based on tutorials in "R and Data Mining: Examples and Case Studies": http://www.rdatamining.com/books/rdm
 
 install.packages("tm")
 install.packages("SnowballC")
@@ -28,8 +28,9 @@ myCorpus <- tm_map(myCorpus, content_transformer(function(y) iconv(y, to='UTF-8-
 
 inspect(myCorpus[11:15])
 
+# Make sure it's in plain text format
 class(myCorpus[[1]]) 
-# myCorpus <- tm_map(myCorpus, PlainTextDocument, lazy=TRUE)
+myCorpus <- tm_map(myCorpus, PlainTextDocument, lazy=TRUE)
 
 ###############################################################
 ## Cleaning the text (if not pre-cleaned)
@@ -53,8 +54,15 @@ class(myCorpus[[1]])
 
 ## tm has errors with stem completion, so we will skip this step for now
 # myCorpus <- tm_map(myCorpus, stemCompletion, dictionary = myCorpusCopy)
-## Alternate stem completion method: https://stackoverflow.com/questions/25206049/stemcompletion-is-not-working
 
+myCorpus <- tm_map(myCorpus, stripWhitespace)
+myCorpus <- tm_map(myCorpus, PlainTextDocument)
+
+###############################################################
+
+## If pre-cleaned, use only this section:
+myStopwords <- c("china", "chinese", "article", "editor", "none", "said", "international", "intern", "today", "chine", "a", "b", "c", "d", "nt")
+myCorpus <- tm_map(myCorpus, removeWords, myStopwords) 
 myCorpus <- tm_map(myCorpus, stripWhitespace)
 myCorpus <- tm_map(myCorpus, PlainTextDocument)
 
@@ -64,18 +72,11 @@ myCorpus <- tm_map(myCorpus, PlainTextDocument)
 
 inspect(myCorpus[11:15])
 
-for (i in 1:length(myCorpus)) {
-  attr(myCorpus[[i]], "time") <- raw_data$time[i]
-}
-
 ## To check for certain words:
 # chinaCases <- tm_map(myCorpus, grep, pattern = "\\<china")
 # sum(unlist(chinaCases))
 
-## To save as a data frame
-# dataframe.text <-data.frame(text=unlist(sapply(myCorpus, `[`, "content")), stringsAsFactors=F)
-
-## Make sure it's in plain text format
+# Make sure it's in plain text format
 class(myCorpus[[1]]) 
 # if 'character':
 # myCorpus <- tm_map(myCorpus, PlainTextDocument, lazy=TRUE)
@@ -133,15 +134,15 @@ term.freq <- rowSums(as.matrix(tdm))
 term.freq <- subset(term.freq, term.freq >= 2000&term.freq<=5000)
 df <- data.frame(term = names(term.freq), freq = term.freq)
 
-# cluster terms: 20 clusters
+# cluster terms: 6 clusters
 distMatrix <- dist(scale(m2))
 fit <- hclust(distMatrix, method = "ward.D")
 plot(fit)
-rect.hclust(fit, k = 20)
+rect.hclust(fit, k = 6)
 
 m3 <- t(m2) # transpose the matrix to cluster documents
 set.seed(9) # set a fixed random seed
-k <- 20 # number of clusters
+k <- 6 # number of clusters
 kmeansResult <- kmeans(m3, k)
 round(kmeansResult$centers, digits = 3)
 
@@ -171,20 +172,20 @@ for (i in 1:k) {
 
 ###############################################################
 
-# Hierarchical clustering of the data
+## Hierarchical clustering of the data
+# This is a way to help choose how many clusters you think the data contains
 
 set.seed(2)
 idx <- sample(1:dim(m2)[1], 40)
 m2sample <- m2[idx, ]
 hc <- hclust(dist(m2sample), method="ave")
 plot(hc, hang=-1)
-rect.hclust(hc, k=12)
-groups <- cutree(hc, k=12)
+rect.hclust(hc, k=6)
+groups <- cutree(hc, k=6)
 
 ###############################################################
 
 ### Partitioning around medoids (PAM)
-# (does not work yet)
 
 library(fpc)
 pamResult <- pamk(m3, metric="manhattan")
@@ -194,8 +195,6 @@ for (i in 1:k) {
   cat("cluster", i, ":  ",
       colnames((pamResult$medoids)[which(pamResult$medoids[i,]==1)], "\n"))
 }
-## Error in if (do.NULL) NULL else if (nc > 0L) paste0(prefix, seq_len(nc)) else character() : 
-##  argument is not interpretable as logical
 
 layout(matrix(c(1, 2), 1, 2)) # set to two graphs per page
 plot(pamResult, col.p = pamResult$clustering)
@@ -215,8 +214,9 @@ dtm <- as.DocumentTermMatrix(tdm)
 
 library(topicmodels)
 library(data.table)
+library(ggplot2)
 
-# find 15 topics and first 6 terms of every topic term
+# find 15 topics and first 10 terms of every topic term
 lda <- LDA(dtm, k = 15) 
 term <- terms(lda, 10) 
 term
@@ -226,5 +226,16 @@ topic <- topics(lda, 1)
 topics <- data.frame(date=as.IDate(raw_data$time), topic)
 
 qplot(date, ..count.., data=topics, geom="density", fill=term[topic], position="stack") + guides(fill = guide_legend(reverse=TRUE))
+
+
+# To show articles for every day:
+qplot(date, ..count.., data=topics, geom="bar", fill=term[topic], binwidth=365) + guides(fill = guide_legend(reverse=TRUE))
+
+# By week:
+qplot(date, ..count.., data=topics, geom="bar", fill=term[topic], binwidth=91.25) + guides(fill = guide_legend(reverse=TRUE))
+
+# Monthly (roughly):
+qplot(date, ..count.., data=topics, geom="bar", fill=term[topic], binwidth=7) + guides(fill = guide_legend(reverse=TRUE))
+
 
 ##############################
