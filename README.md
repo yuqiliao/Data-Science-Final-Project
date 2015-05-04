@@ -41,7 +41,21 @@ We also experiemnted with importing the dataset into R and using the tm package 
 
 To analyze the data and examine NYT coverage of China over time, we used methods from the book _R and Data Mining: Examples and Case Studies_, by Yanchang Zhao, available at http://www.rdatamining.com/books/rdm (2012), specifically the tutorial on Twitter data analysis: http://www.rdatamining.com/docs/text-mining-with-r-of-twitter-data-analysis
 
-#Data Overview: Frequent Words and Associations Analysis
+## Data Overview
+
+Overall, we analyzed 22,339 NYT articles from January 1, 1990 to December 31, 2000 (not including articles from wires services).
+
+1990: 1738
+<br>1991: 1657
+<br>1992: 1735
+<br>1993: 1685
+<br>1994: 1821
+<br>1995: 1896
+<br>1996: 2132
+<br>1997: 2502
+<br>1998: 2567
+<br>1999: 2800
+<br>2000: 3226
 
 After converting the dataset to a term document matrix, we examined the dataset to see how often different terms were used, and get a sense of the general shape of the data. For our initial graphs, we decided to focus on unigrams that had been used more than 2000 times in the time period, but less than 5000:
 
@@ -59,7 +73,7 @@ Bigram and trigram analysis provide another perspective into the characteristics
 
 These basic steps gave us a sense of the data we were working with, and reflected some interesting facts in their own right. First, they show the changes of leadership from China and the US are reflected by the mentioning of “President Clinton” “President Bush” and “Deng Xiaoping” and “Jiang Zemin”. “President Clinton” was mentioned much more than “President Bush”, reflecting Clinton's longer term in office and greater engagement with China (including his 1998 visit). Second, the fact that Hong Kong ranks the third in bigram matrix suggests that the Hong Kong may not become the heated topic all of the sudden in 1997, but rather is fairly common throughout the 10-year period. Third, the keywords about the major events in the period could all be found in these matrix, as we expected.
 
-#Clustering analysis
+##Clustering analysis
 
 Due to the unsupervised nature of its methods, this project is not interested in prediction of an associated response variable. Rather, the goal is to discover interesting characteristics about the measurements among independent variables -- specifically, the unigrams used in NYT articles from 1990 to 2000. As described in _An Introduction to Statistical Learning with Applications in R_ (ISLR), there are two common types of unsupervised learning to achieve this goal. The first, principal components analysis (PCA), is a tool used before supervised techniques are applied; it seeks to find a low-dimensional representation of the observations that explain a good fraction of the variance. This project focuses on the clustering approach for this portion: Clustering refers in fact to a broad class of methods for discovering unknown subgroups in data by looking for homogeneous subgroups among the observations. 
 
