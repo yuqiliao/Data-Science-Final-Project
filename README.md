@@ -108,8 +108,8 @@ The next method in _R and Data Mining: Examples and Case Studies_ was topic mode
 
 Once again, we had to pre-determine the number of topics we thought the data would contain, and once again explored many different configurations. The familiar 15 topic frame yielded results that were similar to our cluster analysis, but different at the same time:
 
-| | Topic 1| Topic 2 |Topic 3 |    Topic 4   | Topic 5   | Topic 6  | Topic 7   |Topic 8  |Topic 9   |   Topic 10|
-| ---|-----|----- |---|---|---|--|---|--|--|--|
+| | Topic 1| Topic 2 |Topic 3 | Topic 4 | Topic 5   | Topic 6  | Topic 7   |Topic 8  |Topic 9   |   Topic 10|
+| ---|---|---|---|---|---|---|---|---|---|---|
 | [1,] |"year"  |"peopl" |"chines"   | "state"  |  "american"| "would"   |"mr"     | "one"|    "trade"     | "a1"    |
 | [2,]| "last" | "say"  | "right"  |   "unit"   |  "first"  |  "govern"  |"includ"  |"day" ||   "clinton" |   "new" |  
 | [3,] "week" | "may"  | "countri"   |"nation" |  "made"|     "offici"|  "film"|    "like"|  | "administr"|  "case"  |
@@ -121,8 +121,8 @@ Once again, we had to pre-determine the number of topics we thought the data wou
  |[9,] "time" | "war"  | "asian"    | "weapon" |  "public"  | "announc" |"program" "design" |"secretari" | "citi"  |
 |[10,] "old"   |"chang" |"democraci" |"soviet" |  "japanes" | "depart" | "earli" |  "small"  |"iraq"   |    "nation"|
 
-    | | Topic 11 |   Topic 12 |Topic 13 |  Topic 14   |Topic 15  |
-| ---|-----|----- |---|---|---|--|---|--|--|--|
+| | Topic 11 |   Topic 12 |Topic 13 |  Topic 14   |Topic 15  |
+| ---|---|---|---|---|---|---|---|---|---|---|
 | [1,] "world"  |   "one"  |  "presid"|   "new"  |    "compani" |
 | [2,] "women"  |   "like"  | "mr"    |   "york"  |   "million" |
 | [3,] "team"    |  "get"    |"leader"|   "street" |  "market"  |
