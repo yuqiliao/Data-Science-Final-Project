@@ -74,29 +74,29 @@ _In the above example, we asked R to show us divisions in the hierarchical dendr
 For our analysis, we experimented with different numbers of clusters. To show the difference in clusters based on predetermined Ks, the difference between 6 and 15 clusters are shown below. (Due to difficulties re-stemming our data during cleaning, some of the terms are more cryptic than they otherwise would be.)
 
 *Example: 6 clusters*
-1: new street art york world work open state mr us 
-2: new year state presid nation week mr one hous two 
-3: year one world last american mr two like new nation 
-4: unit state nation american world year offici countri trade new 
-5: presid clinton mr american trade administr hous offici state year 
-6: new york year citi time art one street mr last 
+<br>1: new street art york world work open state mr us 
+<br>2: new year state presid nation week mr one hous two 
+<br>3: year one world last american mr two like new nation 
+<br>4: unit state nation american world year offici countri trade new 
+<br>5: presid clinton mr american trade administr hous offici state year 
+<br>6: new york year citi time art one street mr last 
 
 *Example: 15 clusters*
-1: art new street york show work includ time citi american 
-2: presid clinton mr hous trade state administr polici american nation 
-3: one world mr like new peopl nation govern say day 
-4: unit state nation world american offici countri year new trade 
-5: japan world war american countri year trade state unit first 
-6: new york citi time year mr one compani street state 
-7: week mr life last one new hous world time year 
-8: last week year month mr one world new govern time 
-9: american trade offici state unit administr world clinton nation compani 
-10: year last new one world two ago first mr time 
-11: new year state week two american compani york last one 
-12: two one year mr first world day new nation week 
-13: year one ago mr world like die time nation first 
-14: street new art york work world open state show includ 
-15: new presid nation state year offici clinton govern unit citi
+<br>1: art new street york show work includ time citi american 
+<br>2: presid clinton mr hous trade state administr polici american nation 
+<br>3: one world mr like new peopl nation govern say day 
+<br>4: unit state nation world american offici countri year new trade 
+<br>5: japan world war american countri year trade state unit first 
+<br>6: new york citi time year mr one compani street state 
+<br>7: week mr life last one new hous world time year 
+<br>8: last week year month mr one world new govern time 
+<br>9: american trade offici state unit administr world clinton nation compani 
+<br>10: year last new one world two ago first mr time 
+<br>11: new year state week two american compani york last one 
+<br>12: two one year mr first world day new nation week 
+<br>13: year one ago mr world like die time nation first 
+<br>14: street new art york work world open state show includ 
+<br>15: new presid nation state year offici clinton govern unit citi
 
 In both cases, the impact of our "wide net" approach to choosing our articles (any article mentioning the word "China") is clear, as we are finding many clusters related to art, music, museums, and restaurants in the New York City area. However, as we increase the number of clusters to 15, we also begin to see more fine-grained clusters emerging around specific issues, such as topic 5 (which includes mentions of Japan, World War [II], and trade). However, we wanted to see how else we could explore these same data based on different methods.
 
@@ -109,6 +109,7 @@ The next method in _R and Data Mining: Examples and Case Studies_ was topic mode
 Once again, we had to pre-determine the number of topics we thought the data would contain, and once again explored many different configurations. The familiar 15 topic frame yielded results that were similar to our cluster analysis, but different at the same time:
 
 | | Topic 1| Topic 2 |Topic 3 |    Topic 4   | Topic 5   | Topic 6  | Topic 7   |Topic 8  |Topic 9   |   Topic 10|
+| ---|-----|----- |---|---|---|-|---|--|--|-|--|
 | [1,] |"year"  |"peopl" |"chines"   | "state"  |  "american"| "would"   |"mr"     | "one"|    "trade"     | "a1"    |
 | [2,]| "last" | "say"  | "right"  |   "unit"   |  "first"  |  "govern"  |"includ"  |"day" ||   "clinton" |   "new" |  
 | [3,] "week" | "may"  | "countri"   |"nation" |  "made"|     "offici"|  "film"|    "like"|  | "administr"|  "case"  |
@@ -119,7 +120,9 @@ Once again, we had to pre-determine the number of topics we thought the data wou
  |[8,] "sinc"|  "take" | "organ"    | "korea"  |  "help"  |   "news"  |  "john"   | "travel" |"meet" |      "polic" |
  |[9,] "time" | "war"  | "asian"    | "weapon" |  "public"  | "announc" |"program" "design" |"secretari" | "citi"  |
 |[10,] "old"   |"chang" |"democraci" |"soviet" |  "japanes" | "depart" | "earli" |  "small"  |"iraq"   |    "nation"|
+
     | | Topic 11 |   Topic 12 |Topic 13 |  Topic 14   |Topic 15  |
+| ---|-----|----- |---|---|---|-|---|--|--|-|--|
 | [1,] "world"  |   "one"  |  "presid"|   "new"  |    "compani" |
 | [2,] "women"  |   "like"  | "mr"    |   "york"  |   "million" |
 | [3,] "team"    |  "get"    |"leader"|   "street" |  "market"  |
