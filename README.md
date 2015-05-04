@@ -5,7 +5,7 @@ by Kathryn Zickuhr & Yuqi Liao
 
 
 ##Project Background & Goals
-Public opinion polling demonstrates that [Americans' views of China have changed substantially over the past few decades](http://www.pewresearch.org/fact-tank/2014/06/03/how-americas-opinion-of-china-has-changed-since-tiananmen/) since the country's economic reforms of 1978. The purpose of this project is to examine U.S. media coverage of China over the 1990s by examining the New York Times's coverage of the People's Republic of China from 1990 to 2000.
+Public opinion polling demonstrates that [Americans' views of China have changed substantially over the past few decades](http://www.pewresearch.org/fact-tank/2014/06/03/how-americas-opinion-of-china-has-changed-since-tiananmen/) since the country's economic reforms of 1978. The purpose of this project is to examine U.S. media coverage of China over the 1990s by examining the New York Times's coverage of the People's Republic of China from 1990 to the end of 2000.
 
 We chose this decade as an interesting snapshot into a time of change in Chinese relations with the United States, in the period in between the Tiananmen Square protests of 1989 and the September 11, 2001 terrorist attacks that so strongly altered American foreign relations. Some of the major events of this time period include:
 
@@ -130,10 +130,52 @@ The next method in _R and Data Mining: Examples and Case Studies_ was topic mode
 |[9,]| "lead"    |  "live" |  "democrat"| "children" |"stock"   |
 |[10,]| "final"   |  "make" |  "bush"    | "east"     |"price"|
 
+Interpreting these topics, we might potentially summarize these as:
+<br>1: recent events (vague)
+<br>2: war (vague)
+<br>3: human rights, Taiwan, democracy 
+<br>4: nuclear security, North Korea
+<br>5: Japan and U.S. relations
+<br>6: Hong Kong
+<br>7: film
+<br>8: travel, design
+<br>9: trade, Clinton, Iraq
+<br>10: federal court, murder
+<br>11: sports
+<br>12: books
+<br>13: Clinton, Bush, Democrats, House of Representatives
+<br>14: NYC museums and the arts
+<br>15: stock market, economy
 
+We also charted these topics by week, and by "month" (every 30.5 days):
 
+By week:
 ![15 topics by week](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/15%20topics%20by%20week.png)
 
+For reference, the legend in the graphs is reversed:
+<br>15: stock market, economy
+<br>14: NYC museums and the arts
+<br>13: Clinton, Bush, Democrats, House of Representatives
+<br>12: books
+<br>11: sports
+<br>10: federal court, murder
+<br>9: trade, Clinton, Iraq
+<br>8: travel, design
+<br>7: film
+<br>6: Hong Kong
+<br>5: Japan and U.S. relations
+<br>4: nuclear security, North Korea
+<br>3: human rights, Taiwan, democracy 
+<br>2: war (vague)
+<br>1: recent events (vague)
+
+By month:
 ![15 topics by month](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/15%20topics%20by%20month.png)
 
+# Conclusions
 
+We learned many things in our exploratory analysis. We learned, for instance, that the methods of cluster analysis and topic modeling that we chose contain as much art as science, and require a clear understanding of the data as well as much patience to be used effectively. We were unable to determine, before our analysis, that news coverage of China "naturally" fell into 15 categories; it's possible that the NYT's articles mentioning China fall into only 2-3 categories, or into 30-40. We chose 15 to focus on after trial and error, and in no small part because most of the topics seemed to make intuitive sense to us -- but it's also possible that the topics we intuited were not what the model was in fact picking up.
+
+In the future, we may want to focus our initial pulls on the API to focus on only "hard news" desks covering China, to exclude restaurant reviews and announcements of new books; this may not be a simple process, given that the NYT has changed its classification systems for news desks and general "subject" groupings over time, but it would be possible. We could also filter our initial search on certain words, if we wanted to focus on narrower topics (such as trade with China) or exclude specific ones (such as any mention of a museum). 
+
+Finally, we could move away from machine learning techniques and instead focus on a more deliberate method, by creating our own set of keywords that we would expect coverage of China to include based on topics such as those we identified in our "historical events" section. Such an analysis would specifically look for words related to the economy and trade, the environment, nuclear security, human rights, etc. However, this method would be subject to its own biases, and might be most meaningful when used in conjunction with methods such as those used in this project.
