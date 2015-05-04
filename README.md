@@ -67,7 +67,7 @@ As ISLR describes, two of the best-known clustering approaches are K-means clust
 
 Hierarchical clustering does offer a tree-like visual representation of the observations, a dendrogram, to help determine the number of clusters needed; observations that fuse at the very bottom of the tree are quite similar to each other, whereas observations that fuse close to the top of the tree will tend to be quite different. In the case of this project, however, we found the results far from clear:
 
-![dendrogram]()
+![dendrogram: 12 clusters](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/dendogram.png)
 
 _In the above example, we asked R to show us divisions in the hierarchical dendrogram based on 12 clusters._
 
