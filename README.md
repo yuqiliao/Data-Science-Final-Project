@@ -172,6 +172,8 @@ For reference, the legend in the graphs is reversed:
 By month:
 ![15 topics by month](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/15%20topics%20by%20month.png)
 
+We see many things here that would warrant further exploration. We appear to see a spike in coverage in mid-1998, generally coinciding with President Clinton's visit to China in that time period. We see greater coverage of human rights issues at the beginning of the time period, closest to the events of 1989, but also occurring throughout the coverage period. However, we also want to avoid over-interpreting the data, as the models we have created are somewhat vague and do not align perfectly with the highly specific "topics" we might have expected to find at the outset.
+
 # Conclusions
 
 We learned many things in our exploratory analysis. We learned, for instance, that the methods of cluster analysis and topic modeling that we chose contain as much art as science, and require a clear understanding of the data as well as much patience to be used effectively. We were unable to determine, before our analysis, that news coverage of China "naturally" fell into 15 categories; it's possible that the NYT's articles mentioning China fall into only 2-3 categories, or into 30-40. We chose 15 to focus on after trial and error, and in no small part because most of the topics seemed to make intuitive sense to us -- but it's also possible that the topics we intuited were not what the model was in fact picking up.
