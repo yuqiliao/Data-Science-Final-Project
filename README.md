@@ -45,17 +45,17 @@ To analyze the data and examine NYT coverage of China over time, we used methods
 
 After converting the dataset to a term document matrix, we examined the dataset to see how often different terms were used, and get a sense of the general shape of the data. For our initial graphs, we decided to focus on unigrams that had been used more than 2000 times in the time period, but less than 5000:
 
-![bar chart]()
+![bar chart of frequent terms](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/frequent%20terms.png)
 
 Focusing still closer, in a word cloud:
 
-![word cloud]()
+![word cloud](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/wordcloud.png)
 
 Bigram and trigram analysis provide another perspective into the characteristics of the texts in the paragraph column, with the top 100 bigrams and trigrams as follows:
 
-![bigram]()
+![bigrams](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/bigrams.png)
 
-![trigram]()
+![trigrams](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/trigrams.png)
 
 These basic steps gave us a sense of the data we were working with, and reflected some interesting facts in their own right. First, they show the changes of leadership from China and the US are reflected by the mentioning of “President Clinton” “President Bush” and “Deng Xiaoping” and “Jiang Zemin”. Interestingly, the times that “President Clinton” was mentioned more than “President Bush”, though President Bush held office for much longer in this time period, from 1991 to 1999 -- while President Clinton was in office for only two years in this window (1990-91). Second, the fact that Hong Kong ranks the third in bigram matrix suggests that the Hong Kong may not become the heated topic all of the sudden in 1997, but rather is fairly common throughout the 10-year period. Third, the keywords about the major events in the period could all be found in these matrix, as we expected.
 
@@ -129,5 +129,11 @@ The next method in _R and Data Mining: Examples and Case Studies_ was topic mode
 |[8,]| "play"    |  "want" |  "senat"  |  "west"    | "economi" |
 |[9,]| "lead"    |  "live" |  "democrat"| "children" |"stock"   |
 |[10,]| "final"   |  "make" |  "bush"    | "east"     |"price"|
+
+
+
+![15 topics by week](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/15%20topics%20by%20week.png)
+
+![15 topics by month](https://github.com/yuqiliao/Data-Science-Final-Project/blob/master/Images/15%20topics%20by%20month.png)
 
 
