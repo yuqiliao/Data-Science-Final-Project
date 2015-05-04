@@ -112,26 +112,26 @@ Once again, we had to pre-determine the number of topics we thought the data wou
 | ---|---|---|---|---|---|---|---|---|---|---|
 | [1,] |"year"  |"peopl" |"chines"   | "state"  |  "american"| "would"   |"mr"     | "one"|    "trade"     | "a1"    |
 | [2,]| "last" | "say"  | "right"  |   "unit"   |  "first"  |  "govern"  |"includ"  |"day" |   "clinton" |   "new" |  
-| [3,] "week" | "may"  | "countri"   |"nation" |  "made"|     "offici"|  "film"|    "like"|  | "administr"|  "case"  |
-|[4,] "ago"  | "polit" "beij"    |  "nuclear"|  "month"  |  "report"|  "work"  |  "citi"   |"econom"   |  "kill"  |
-|[5,] "die"|   "could"| "human"   |  "militari" |"japan"  |  "hong"   | "also" |   "place"  |"polici"     |"charg" |
-|[6,] "two"  | "end" |  "taiwan"   | "north"   | "america"|  "kong"   | "open"   | "around" |"washington" |"feder" |
-|[7,] "three" |"mani" | "call"  |    "secur"   | "asia"   |  "page"  |  "show"|    "build"  |"foreign" |   "court" |
-|[8,] "sinc"|  "take" | "organ"    | "korea"  |  "help"  |   "news"  |  "john"   | "travel" |"meet" |      "polic" |
-|[9,] "time" | "war"  | "asian"    | "weapon" |  "public"  | "announc" |"program" "design" |"secretari" | "citi"  |
-|[10,] "old"   |"chang" |"democraci" |"soviet" |  "japanes" | "depart" | "earli" |  "small"  |"iraq"   |    "nation"|
+| [3,]| "week" | "may"  | "countri"   |"nation" |  "made"|     "offici"|  "film"|    "like"|  | "administr"|  "case"  |
+|[4,]| "ago"  | "polit" "beij"    |  "nuclear"|  "month"  |  "report"|  "work"  |  "citi"   |"econom"   |  "kill"  |
+|[5,]| "die"|   "could"| "human"   |  "militari" |"japan"  |  "hong"   | "also" |   "place"  |"polici"     |"charg" |
+|[6,]| "two"  | "end" |  "taiwan"   | "north"   | "america"|  "kong"   | "open"   | "around" |"washington" |"feder" |
+|[7,]| "three" |"mani" | "call"  |    "secur"   | "asia"   |  "page"  |  "show"|    "build"  |"foreign" |   "court" |
+|[8,]| "sinc"|  "take" | "organ"    | "korea"  |  "help"  |   "news"  |  "john"   | "travel" |"meet" |      "polic" |
+|[9,]| "time" | "war"  | "asian"    | "weapon" |  "public"  | "announc" |"program" "design" |"secretari" | "citi"  |
+|[10,]| "old"   |"chang" |"democraci" |"soviet" |  "japanes" | "depart" | "earli" |  "small"  |"iraq"   |    "nation"|
 
 | | Topic 11 |   Topic 12 |Topic 13 |  Topic 14   |Topic 15  |
 | ---|---|---|---|---|---|---|---|---|---|---|
-| [1,] "world"  |   "one"  |  "presid"|   "new"  |    "compani" |
-| [2,] "women"  |   "like"  | "mr"    |   "york"  |   "million" |
-| [3,] "team"    |  "get"    |"leader"|   "street" |  "market"  |
-|[4,] "men"      | "life" |  "hous"  |   "art"     | "percent" |
-|[5,] "second"   | "go"   |  "clinton"|  "pm"      | "busi"    |
-|[6,] "yesterday" |"book" |  "parti"  |  "center"  | "billion" |
-|[7,] "first"   |  "way"  |  "minist" |  "museum"  | "industri"|
-|[8,] "play"    |  "want" |  "senat"  |  "west"    | "economi" |
-|[9,] "lead"    |  "live" |  "democrat"| "children" |"stock"   |
-|[10,] "final"   |  "make" |  "bush"    | "east"     |"price"|
+|[1,]| "world"  |   "one"  |  "presid"|   "new"  |    "compani" |
+|[2,]| "women"  |   "like"  | "mr"    |   "york"  |   "million" |
+|[3,]| "team"    |  "get"    |"leader"|   "street" |  "market"  |
+|[4,]| "men"      | "life" |  "hous"  |   "art"     | "percent" |
+|[5,]| "second"   | "go"   |  "clinton"|  "pm"      | "busi"    |
+|[6,]| "yesterday" |"book" |  "parti"  |  "center"  | "billion" |
+|[7,]| "first"   |  "way"  |  "minist" |  "museum"  | "industri"|
+|[8,]| "play"    |  "want" |  "senat"  |  "west"    | "economi" |
+|[9,]| "lead"    |  "live" |  "democrat"| "children" |"stock"   |
+|[10,]| "final"   |  "make" |  "bush"    | "east"     |"price"|
 
 
