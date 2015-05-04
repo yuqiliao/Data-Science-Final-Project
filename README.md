@@ -39,23 +39,23 @@ We also experiemnted with importing the dataset into R and using the tm package 
 
 # Analyzing the data
 
-To analyze the data and examine NYT coverage of China over time, we used methods from the book _R and Data Mining: Examples and Case Studies_, by Yanchang Zhao, available at http://www.rdatamining.com/books/rdm (2012).
+To analyze the data and examine NYT coverage of China over time, we used methods from the book _R and Data Mining: Examples and Case Studies_, by Yanchang Zhao, available at http://www.rdatamining.com/books/rdm (2012), specifically the tutorial on Twitter data analysis: http://www.rdatamining.com/docs/text-mining-with-r-of-twitter-data-analysis
 
 #Data Overview: Frequent Words and Associations Analysis
 
 After converting the dataset to a term document matrix, we examined the dataset to see how often different terms were used, and get a sense of the general shape of the data. For our initial graphs, we decided to focus on unigrams that had been used more than 2000 times in the time period, but less than 5000:
 
-bar chart
+![bar chart]()
 
 Focusing still closer, in a word cloud:
 
-word cloud
+![word cloud]()
 
 Bigram and trigram analysis provide another perspective into the characteristics of the texts in the paragraph column, with the top 100 bigrams and trigrams as follows:
 
-bigram
+![bigram]()
 
-trigram
+![trigram]()
 
 These basic steps gave us a sense of the data we were working with, and reflected some interesting facts in their own right. First, they show the changes of leadership from China and the US are reflected by the mentioning of “President Clinton” “President Bush” and “Deng Xiaoping” and “Jiang Zemin”. Interestingly, the times that “President Clinton” was mentioned more than “President Bush”, though President Bush held office for much longer in this time period, from 1991 to 1999 -- while President Clinton was in office for only two years in this window (1990-91). Second, the fact that Hong Kong ranks the third in bigram matrix suggests that the Hong Kong may not become the heated topic all of the sudden in 1997, but rather is fairly common throughout the 10-year period. Third, the keywords about the major events in the period could all be found in these matrix, as we expected.
 
@@ -67,7 +67,7 @@ As ISLR describes, two of the best-known clustering approaches are K-means clust
 
 Hierarchical clustering does offer a tree-like visual representation of the observations, a dendrogram, to help determine the number of clusters needed; observations that fuse at the very bottom of the tree are quite similar to each other, whereas observations that fuse close to the top of the tree will tend to be quite different. In the case of this project, however, we found the results far from clear:
 
-dendrogram
+![dendrogram]()
 
 _In the above example, we asked R to show us divisions in the hierarchical dendrogram based on 12 clusters._
 
