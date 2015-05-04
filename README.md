@@ -102,11 +102,7 @@ In both cases, the impact of our "wide net" approach to choosing our articles (a
 
 ## Topic modeling
 
-The next method in _R and Data Mining: Examples and Case Studies_ was topic modeling.
-
-
-
-Once again, we had to pre-determine the number of topics we thought the data would contain, and once again explored many different configurations. The familiar 15 topic frame yielded results that were similar to our cluster analysis, but different at the same time:
+The next method in _R and Data Mining: Examples and Case Studies_ was topic modeling. We used Latent Dirichlet Allocation (LDA), a “bag of words” model that uses a Bayes classifier to assign words to topics based on the articles that they appeared in. As with clustering, we had to pre-determine the number of topics we thought the data would contain, and once again we explored many different configurations. The familiar 15 topic frame yielded results that were similar to our cluster analysis, but different at the same time:
 
 | | Topic 1| Topic 2 |Topic 3 | Topic 4 | Topic 5   | Topic 6  | Topic 7   |Topic 8  |Topic 9   |   Topic 10|
 | ---|---|---|---|---|---|---|---|---|---|---|
